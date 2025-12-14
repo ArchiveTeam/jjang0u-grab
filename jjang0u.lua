@@ -155,7 +155,9 @@ allowed = function(url, parenturl)
     return true
   end
 
-  if string.match(url, "\"") then
+  if string.match(url, "\"")
+    or string.match(url, "////")
+    or string.match(url, "&&&&") then
     return false
   end
 
